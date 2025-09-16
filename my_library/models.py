@@ -7,5 +7,5 @@ class library_list(models.Model):
     name = models.CharField()
     lib_code = models.IntegerField()
     city = models.CharField()
-    book = models.ManyToManyField(Book_List,on_delete=models.PROTECT,related_name='book')
-    user = models.ManyToManyField(User,on_delete=models.PROTECT,related_name='user')
+    book = models.ManyToManyField(Book_List,related_name='book')
+    user = models.ManyToManyField(User,related_name='user')
